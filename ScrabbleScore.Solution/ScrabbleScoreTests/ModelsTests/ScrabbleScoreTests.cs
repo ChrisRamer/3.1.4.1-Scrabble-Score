@@ -63,5 +63,13 @@ namespace ScrabbleScoreTests
 			int result = scrabble.GetScore();
 			Assert.AreEqual(result, 20);
 		}
+
+		[TestMethod]
+		public void GetScore_ScoreAll_Int()
+		{
+			ScrabbleScore scrabble = new ScrabbleScore("adbfkjq");
+			int result = scrabble.GetScore();
+			Assert.AreEqual(result, 33);
+		}
 	}
 }
