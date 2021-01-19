@@ -1,51 +1,67 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Scrabble;
 
-/*
-using RPS.Models;
-
-namespace RPGGameTests
+namespace ScrabbleScoreTests
 {
 	[TestClass]
-	public class RPSGameTests
+	public class ScrabbleTests
 	{
 		[TestMethod]
-		public void DetermineWinner_PlayerWin_String()
+		public void GetScore_Score1_Int()
 		{
-			Game game = new Game("rock");
-			game.CpuAnswer = "scissors";
-			string result = game.DetermineWinner();
-			Assert.AreEqual(result, "win");
+			ScrabbleScore scrabble = new ScrabbleScore("aeioulnrst");
+			int result = scrabble.GetScore();
+			Assert.AreEqual(result, 10);
 		}
 
 		[TestMethod]
-		public void DetermineWinner_PlayerLose_String()
+		public void GetScore_Score2_Int()
 		{
-			Game game = new Game("scissors");
-			game.CpuAnswer = "rock";
-			string result = game.DetermineWinner();
-			Assert.AreEqual(result, "lose");
+			ScrabbleScore scrabble = new ScrabbleScore("dg");
+			int result = scrabble.GetScore();
+			Assert.AreEqual(result, 4);
 		}
 
 		[TestMethod]
-		public void DetermineWinner_Tie_String()
+		public void GetScore_Score3_Int()
 		{
-			Game game = new Game("paper");
-			game.CpuAnswer = "paper";
-			string result = game.DetermineWinner();
-			Assert.AreEqual(result, "tie");
+			ScrabbleScore scrabble = new ScrabbleScore("bcmp");
+			int result = scrabble.GetScore();
+			Assert.AreEqual(result, 12);
 		}
 
 		[TestMethod]
-		public void CPUAnswer_GetAnswer_String()
+		public void GetScore_Score4_Int()
 		{
-			Game game = new Game("rock");
-			string cpuAnswer = game.GetCPUAnswer();
-			bool result = game.Answers.Contains(cpuAnswer);
-			Assert.AreEqual(result, true);
+			ScrabbleScore scrabble = new ScrabbleScore("fhvwy");
+			int result = scrabble.GetScore();
+			Assert.AreEqual(result, 20);
+		}
+
+		[TestMethod]
+		public void GetScore_Score5_Int()
+		{
+			ScrabbleScore scrabble = new ScrabbleScore("k");
+			int result = scrabble.GetScore();
+			Assert.AreEqual(result, 5);
+		}
+
+		[TestMethod]
+		public void GetScore_Score8_Int()
+		{
+			ScrabbleScore scrabble = new ScrabbleScore("jx");
+			int result = scrabble.GetScore();
+			Assert.AreEqual(result, 16);
+		}
+
+		[TestMethod]
+		public void GetScore_Score10_Int()
+		{
+			ScrabbleScore scrabble = new ScrabbleScore("qz");
+			int result = scrabble.GetScore();
+			Assert.AreEqual(result, 20);
 		}
 	}
 }
-
-*/
