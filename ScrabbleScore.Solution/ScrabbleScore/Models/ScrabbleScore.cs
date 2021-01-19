@@ -19,7 +19,7 @@ namespace Scrabble
 
 		public ScrabbleScore(string word)
 		{
-			this.WordPlayed = word;
+			this.WordPlayed = word.ToUpper();
 		}
 
 		public int GetScore()

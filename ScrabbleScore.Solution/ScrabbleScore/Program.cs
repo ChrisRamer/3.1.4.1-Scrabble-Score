@@ -16,7 +16,7 @@ namespace Scrabble
 				return;
 			}
 
-			ScrabbleScore scrabble = new ScrabbleScore(word.ToUpper());
+			ScrabbleScore scrabble = new ScrabbleScore(word);
 
 			Console.WriteLine("-------------------------");
 			Console.WriteLine("The word '" + word + "' scores you " + scrabble.GetScore() + " points!");
